@@ -1,0 +1,35 @@
+<%- include("partials/header.ejs") %>
+
+<h1 class="center-items">Today's List</h1>  
+<div class="center-items">
+<form action="/submit" method="POST">
+    <input type="text" name="textInput" placeholder="New today's task...">
+    <input type="submit" value="Add">
+  </form>
+</div>
+  <p class="center-items"><%= new Date().toLocaleDateString(); %></p>
+  <div class="center-items">
+  <ul>
+      <% textList.forEach(function(text) { %>
+          <li>
+            <input type="checkbox" id="item" + <%= textList.index %>>
+            <label for="item1"  + <%= textList.index %>>
+            <%= text %></li>
+      <% }); %>
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%- include("partials/footer.ejs") %>

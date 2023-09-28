@@ -1,0 +1,33 @@
+<%- include("partials/header.ejs") %>
+
+<h1 class="center-items">Work List</h1>
+<div class="center-items">
+<form action="/ok" method="POST">
+    <input type="text" name="textInput" placeholder="New work task...">
+    <input type="submit" value="Add">
+  </form>
+</div>
+<div class="center-items">
+  <ul>
+      <% workList.forEach(function(text) { %>
+        <li>
+          <input type="checkbox" id="item" + <%= workList.index %>>
+          <label for="item1"  + <%= workList.index %>>
+          <%= text %></li>
+      <% }); %>
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%- include("partials/footer.ejs") %>
